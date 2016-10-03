@@ -1,0 +1,16 @@
+{
+  "name": "pgaccess",
+  "version": "1.0.0",
+  "description": "access to a postgres database from nodejs",
+  "main": "pgaccess.js",
+  "repository": "https://github.com/nodejayes/pgaccess.git",
+  "scripts": {
+    "testmultiresult": "node ./test/multiresult.test.js"
+  },
+  "author": "Markus Gilg",
+  "license": "MIT",
+  "dependencies": {
+    "nan": "2.4.0",
+    "promise": "7.1.1"
+  }
+}
