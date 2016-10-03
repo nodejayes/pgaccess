@@ -18,7 +18,7 @@ module.exports = function () {
   }
 
   function _getSafeSqlString (val) {
-    var strParameter = escapeString(val.toString());
+    var strParameter = _escapeString(val.toString());
     if (typeof val === typeof true) {
       strParameter = val ? "TRUE" : "FALSE";
     } else if (typeof val === typeof "") {
@@ -35,7 +35,7 @@ module.exports = function () {
     } else if (typeof val === typeof []) {
       var tmp = [];
       for (var i = 0; i < val.length; i++) {
-        tmp.push(getSafeSqlString(val[i]));
+        tmp.push(_getSafeSqlString(val[i]));
       }
       strParameter = "ARRAY[" + tmp.join(",") + "]";
     }
@@ -54,7 +54,7 @@ module.exports = function () {
         continue;
       }
       var key = params[i].key;
-      var value = getSafeSqlString(params[i].value);
+      var value = _getSafeSqlString(params[i].value);
       result = result.replace(":" + key, value);
     }
     return result;
