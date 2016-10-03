@@ -1,6 +1,6 @@
 {
   "name": "pgaccess",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "access to a postgres database from nodejs",
   "main": "pgaccess.js",
   "repository": "https://github.com/nodejayes/pgaccess.git",
